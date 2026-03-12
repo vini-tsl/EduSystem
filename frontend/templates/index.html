@@ -1,27 +1,168 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="homepage.css">
-    <title>Escola</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EduSystem Dashboard</title>
+
+<link rel="stylesheet" href="../src/styles/homepage.css">
+
+<!-- ChartJS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div>
-                <h1>Test</h1>
-                <hr>
-                <p>test1</p>
-                <p>test2</p>
-                <p>test3</p>
-                <p>test4</p>
-            </div>
-        </nav>
-    </header>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+
+    <div class="logo">
+    <i class="fa-solid fa-graduation-cap"></i>
+    <h2>EduSystem</h2>
+    </div>
+
+    <nav>
+
+    <a class="active"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+    <a><i class="fa-solid fa-chalkboard"></i> Turmas</a>
+    <a><i class="fa-solid fa-user-graduate"></i> Alunos</a>
+    <a><i class="fa-solid fa-file-lines"></i> Notas</a>
+    <a><i class="fa-solid fa-calendar"></i> Calendário</a>
+    <a><i class="fa-solid fa-list-check"></i> Atividades</a>
+
+    </nav>
+
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
     <main>
 
+        <!-- HEADER -->
+        <header class="topbar">
+
+        <div></div>
+
+        <div class="user">
+
+        <div>
+        <h4>Prof. Maria Silva</h4>
+        <span>Coordenadora</span>
+        </div>
+
+        <div class="avatar">
+        MS
+        </div>
+
+        </div>
+
+        </header>
+
+        <!-- DASHBOARD -->
+        <section class="dashboard">
+
+        <!-- CARDS -->
+        <div class="cards">
+
+        <div class="card">
+        <div>
+        <h3>Total de Alunos</h3>
+        <h1>1.284</h1>
+        <span class="green">+12.5%</span>
+        </div>
+
+        <div class="icon blue">
+        <i class="fa-solid fa-users"></i>
+        </div>
+        </div>
+
+        <div class="card">
+        <div>
+        <h3>Turmas Ativas</h3>
+        <h1>32</h1>
+        <span class="green">+2</span>
+        </div>
+
+        <div class="icon green">
+        <i class="fa-solid fa-book-open"></i>
+        </div>
+        </div>
+
+        <div class="card">
+        <div>
+        <h3>Média Geral</h3>
+        <h1>8.4</h1>
+        <span class="green">+0.3</span>
+        </div>
+
+        <div class="icon purple">
+        <i class="fa-solid fa-chart-line"></i>
+        </div>
+        </div>
+
+        <div class="card">
+        <div>
+        <h3>Eventos Hoje</h3>
+        <h1>5</h1>
+        <span class="orange">3 pendentes</span>
+        </div>
+
+        <div class="icon orange">
+        <i class="fa-solid fa-calendar-day"></i>
+        </div>
+        </div>
+
+        </div>
+
+        <!-- GRÁFICOS -->
+        <div class="charts">
+
+        <div class="chart-box">
+        <h3>Desempenho por Turma</h3>
+        <canvas id="turmasChart"></canvas>
+        </div>
+
+        <div class="chart-box">
+        <h3>Taxa de Presença Mensal</h3>
+        <canvas id="presencaChart"></canvas>
+        </div>
+
+        </div>
+
+        <!-- ATIVIDADES -->
+        <div class="activities">
+
+        <h3>Atividades Recentes</h3>
+
+        <div class="activity">
+        <div>
+        <strong>Prova de Matemática - 9º A</strong>
+        <p>Matemática</p>
+        </div>
+
+        <span class="status pending">pendente</span>
+        </div>
+
+        <div class="activity">
+        <div>
+        <strong>Trabalho de História</strong>
+        <p>História</p>
+        </div>
+
+        <span class="status progress">em andamento</span>
+        </div>
+
+        </div>
+
+        </section>
+
     </main>
+
+    <script src="../src/scripts/chart.js"></script>
+
 </body>
 </html>
