@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EduSystem</title>
+
+<link rel="stylesheet" href="../src/styles/login.css">
+
+<!-- Biblioteca de ícones -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Container principal que centraliza o card -->
+<div class="login-container">
+
+    <!-- Card de login -->
+    <div class="login-card">
+
+        <!-- Logo -->
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h2>EduSystem</h2>
+        </div>
+
+        <p class="subtitle">Acesse sua conta</p>
+
+        <!-- Formulário -->
+        <form id="loginForm">
+
+            <!-- Campo de usuário/email -->
+            <div class="input-group">
+
+                <i class="fa-solid fa-user"></i>
+
+                <input 
+                type="text" 
+                id="email"
+                placeholder="E-mail ou usuário"
+                required>
+
+            </div>
+
+            <!-- Campo de senha -->
+            <div class="input-group">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input 
+                type="password"
+                id="senha"
+                placeholder="Senha"
+                required>
+
+                <!-- Botão mostrar senha -->
+                <i class="fa-solid fa-eye toggle-password" id="toggleSenha"></i>
+
+            </div>
+
+            <!-- Link esqueci senha -->
+            <div class="forgot">
+                <a href="#">Esqueci minha senha</a>
+            </div>
+
+            <!-- Botão login -->
+            <button type="submit" class="login-btn">
+                Entrar
+            </button>
+
+            <!-- Mensagem de erro -->
+            <p id="erroLogin" class="error-message"></p>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="../src/scripts/login.js"></script>
+
+</body>
+</html>
